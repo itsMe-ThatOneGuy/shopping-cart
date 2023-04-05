@@ -21,8 +21,8 @@ const Shop = (props) => {
 				<h1>Shop</h1>
 			</div>
 			<div>
-				{items.map((e) => {
-					return <ShopItem key={e.id} items={e} />;
+				{items.map((item) => {
+					return <ShopItem key={item.id} item={item} />;
 				})}
 			</div>
 		</div>
