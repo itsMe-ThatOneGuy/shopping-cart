@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-const test = "test";
+
 const Navbar = () => {
 	const navStyle = {
 		color: "white",
