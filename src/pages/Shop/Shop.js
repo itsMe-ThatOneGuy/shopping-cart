@@ -22,7 +22,13 @@ const Shop = (props) => {
 			</div>
 			<div>
 				{items.map((item) => {
-					return <ShopItem key={item.id} item={item} />;
+					return (
+						<ShopItem
+							key={item.id}
+							item={item}
+							addToCart={props.addToCart}
+						/>
+					);
 				})}
 			</div>
 		</div>
