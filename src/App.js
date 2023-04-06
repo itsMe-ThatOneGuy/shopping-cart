@@ -9,13 +9,21 @@ import Cart from "./pages/Cart/Cart";
 const App = () => {
 	const [cart, setCart] = useState([]);
 
+	const addToCart = (item) => {
+		setCart([...cart, item]);
+	};
+
 	return (
 		<BrowserRouter>
 			<div className="App">
 				<Navbar />
 				<Routes>
 					<Route path="/homepage" exact element={<Homepage />} />
-					<Route path="/shop" exact element={<Shop />} />
+					<Route
+						path="/shop"
+						exact
+						element={<Shop addToCart={addToCart} />}
+					/>
 					<Route path="/cart" exact element={<Cart cart={cart} />} />
 				</Routes>
 			</div>
