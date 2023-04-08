@@ -2,7 +2,7 @@ import React from "react";
 
 const ShopItem = (props) => {
 	return (
-		<div className="shop-item" id={`item-${props.item.id}`}>
+		<div className="shop-item" data-shopitem-id={props.item.id}>
 			<div className="shop-item-img">
 				<img src={props.item.image} alt={props.item.title} />
 			</div>
