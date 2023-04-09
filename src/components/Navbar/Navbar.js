@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = (props) => {
 	const navStyle = {
 		color: "white",
 	};
@@ -17,8 +17,14 @@ const Navbar = () => {
 					<li>Shop</li>
 				</Link>
 				<Link style={navStyle} to={"/cart"}>
-					<li>Cart</li>
+					<span>
+						<li>Cart</li>
+						{props.cartAmount}
+					</span>
 				</Link>
+				<button onClick={() => console.log(props.cartAmount)}>
+					test
+				</button>
 			</ul>
 		</nav>
 	);
