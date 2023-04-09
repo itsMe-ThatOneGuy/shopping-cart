@@ -1,7 +1,11 @@
 import React from "react";
 
 const ShopItem = (props) => {
-	const item = props.item;
+	const item = {
+		title: props.item.title,
+		price: props.item.price,
+		quantity: 1,
+	};
 
 	return (
 		<div className="shop-item" data-shopitem-id={props.item.id}>
