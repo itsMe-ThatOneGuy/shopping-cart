@@ -22,7 +22,7 @@ const App = () => {
 					<Route
 						path="/shop"
 						exact
-						element={<Shop addToCart={addToCart} />}
+						element={<Shop addToCart={addToCart} cart={cart} />}
 					/>
 					<Route path="/cart" exact element={<Cart cart={cart} />} />
 				</Routes>
