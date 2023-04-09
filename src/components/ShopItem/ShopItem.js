@@ -1,6 +1,8 @@
 import React from "react";
 
 const ShopItem = (props) => {
+	const item = props.item;
+
 	return (
 		<div className="shop-item" data-shopitem-id={props.item.id}>
 			<div className="shop-item-img">
@@ -12,7 +14,12 @@ const ShopItem = (props) => {
 			</div>
 			<div className="shop-item-controls">
 				<button>-</button>
-				<button>Add to cart</button>
+				<button
+					onClick={() => {
+						props.addToCart(item);
+					}}>
+					Add to cart
+				</button>
 				<button>+</button>
 			</div>
 		</div>
