@@ -15,11 +15,16 @@ const Shop = (props) => {
 		setItems(items);
 	};
 
+	const test = () => {
+		console.log(props.cart);
+	};
+
 	return (
 		<div>
 			<div>
 				<h1>Shop</h1>
 			</div>
+			<button onClick={test}>Test</button>
 			<div>
 				{items.map((item) => {
 					return (
