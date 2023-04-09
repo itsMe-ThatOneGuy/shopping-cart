@@ -8,15 +8,24 @@ import Cart from "./pages/Cart/Cart";
 
 const App = () => {
 	const [cart, setCart] = useState([]);
+	const [cartAmount, setCartAmount] = useState();
 
 	const addToCart = (item) => {
 		setCart([...cart, item]);
 	};
 
+	const updateCartAmount = () => {
+		let value = 0;
+		cart.forEach((item) => {
+			value += item.quantity;
+		});
+		setCartAmount(value);
+	};
+
 	return (
 		<BrowserRouter>
 			<div className="App">
-				<Navbar />
+				<Navbar cartAmount={cartAmount} />
 				<Routes>
 					<Route path="/homepage" exact element={<Homepage />} />
 					<Route
