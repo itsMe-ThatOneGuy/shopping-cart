@@ -2,6 +2,7 @@ import React from "react";
 
 const ShopItem = (props) => {
 	const item = {
+		image: props.item.image,
 		title: props.item.title,
 		price: props.item.price,
 		quantity: 1,
