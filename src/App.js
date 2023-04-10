@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Shop from "./pages/Shop/Shop";
@@ -14,12 +14,16 @@ const App = () => {
 		setCart([...cart, item]);
 	};
 
+	useEffect(() => {
+		updateCartAmount();
+	}, [cart]);
+
 	const updateCartAmount = () => {
-		let value = 0;
-		cart.forEach((item) => {
-			value += item.quantity;
-		});
-		setCartAmount(value);
+		const cartQuantity = cart.reduce(
+			(total, item) => total + item.quantity,
+			0
+		);
+		setCartAmount(cartQuantity);
 	};
 
 	return (
