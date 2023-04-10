@@ -1,9 +1,17 @@
 import React from "react";
+import CartItem from "../../components/CartItem/CartItem";
 
-const Cart = () => {
+const Cart = (props) => {
 	return (
 		<div>
-			<h1>cart</h1>
+			<div>
+				<h1>cart</h1>
+			</div>
+			<div>
+				{props.cart.map((item) => {
+					return <CartItem key={`cart-${item.id}`} item={item} />;
+				})}
+			</div>
 		</div>
 	);
 };
