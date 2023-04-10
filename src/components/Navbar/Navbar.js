@@ -17,10 +17,9 @@ const Navbar = (props) => {
 					<li>Shop</li>
 				</Link>
 				<Link style={navStyle} to={"/cart"}>
-					<span>
-						<li>Cart</li>
-						{props.cartAmount}
-					</span>
+					<li>
+						Cart <span>{props.cartAmount}</span>
+					</li>
 				</Link>
 				<button onClick={() => console.log(props.cartAmount)}>
 					test
