@@ -8,7 +8,7 @@ const CartItem = (props) => {
 			<p>${props.item.price}</p>
 			<button>-</button>
 			<p>{props.item.quantity}</p>
-			<button>-</button>
+			<button>+</button>
 		</div>
 	);
 };
