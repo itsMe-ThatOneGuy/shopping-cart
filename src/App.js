@@ -31,7 +31,16 @@ const App = () => {
 	};
 
 	const getCartItem = (key) => {
-		return cart.findIndex((obj) => obj.id === key.id);
+		console.log(cart);
+		const index = cart.findIndex((obj) => obj.id === parseInt(key));
+		console.log(index);
+		return index;
+	};
+
+	const incrementQuantity = (item) => {
+		const currentCart = [...cart];
+		currentCart[item].quantity += 1;
+		setCart(currentCart);
 	};
 
 	return (
@@ -45,7 +54,17 @@ const App = () => {
 						exact
 						element={<Shop addToCart={addToCart} cart={cart} />}
 					/>
-					<Route path="/cart" exact element={<Cart cart={cart} />} />
+					<Route
+						path="/cart"
+						exact
+						element={
+							<Cart
+								cart={cart}
+								incrementQuantity={incrementQuantity}
+								getCartItem={getCartItem}
+							/>
+						}
+					/>
 				</Routes>
 			</div>
 		</BrowserRouter>
