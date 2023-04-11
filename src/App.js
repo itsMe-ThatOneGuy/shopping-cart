@@ -35,6 +35,12 @@ const App = () => {
 		return index;
 	};
 
+	const decrementQuantity = (item) => {
+		const currentCart = [...cart];
+		currentCart[item].quantity -= 1;
+		setCart(currentCart);
+	};
+
 	const incrementQuantity = (item) => {
 		const currentCart = [...cart];
 		currentCart[item].quantity += 1;
@@ -59,6 +65,7 @@ const App = () => {
 							<Cart
 								cart={cart}
 								incrementQuantity={incrementQuantity}
+								decrementQuantity={decrementQuantity}
 								getCartItem={getCartItem}
 							/>
 						}
