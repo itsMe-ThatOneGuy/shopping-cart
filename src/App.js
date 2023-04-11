@@ -31,9 +31,7 @@ const App = () => {
 	};
 
 	const getCartItem = (key) => {
-		console.log(cart);
 		const index = cart.findIndex((obj) => obj.id === parseInt(key));
-		console.log(index);
 		return index;
 	};
 
