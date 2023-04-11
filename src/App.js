@@ -37,14 +37,22 @@ const App = () => {
 
 	const decrementQuantity = (item) => {
 		const currentCart = [...cart];
-		currentCart[item].quantity -= 1;
-		setCart(currentCart);
+		const thisItem = currentCart[item];
+		if (thisItem.quantity !== 0) {
+			thisItem.quantity -= 1;
+		}
+		validateCart(currentCart);
 	};
 
 	const incrementQuantity = (item) => {
 		const currentCart = [...cart];
 		currentCart[item].quantity += 1;
-		setCart(currentCart);
+		validateCart(currentCart);
+	};
+
+	const validateCart = (newCart) => {
+		const updatedCart = newCart.filter((item) => item.quantity !== 0);
+		setCart(updatedCart);
 	};
 
 	return (
