@@ -26,6 +26,10 @@ const App = () => {
 		setCartAmount(cartQuantity);
 	};
 
+	const getCartItem = (key) => {
+		return cart.findIndex((obj) => obj.id === key.id);
+	};
+
 	return (
 		<BrowserRouter>
 			<div className="App">
