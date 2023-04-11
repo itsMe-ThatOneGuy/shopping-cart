@@ -18,6 +18,10 @@ const App = () => {
 		updateCartAmount();
 	}, [cart]);
 
+	const updateCart = (newCart) => {
+		setCart(newCart);
+	};
+
 	const updateCartAmount = () => {
 		const cartQuantity = cart.reduce(
 			(total, item) => total + item.quantity,
