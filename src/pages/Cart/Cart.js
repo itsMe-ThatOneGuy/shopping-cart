@@ -9,7 +9,14 @@ const Cart = (props) => {
 			</div>
 			<div>
 				{props.cart.map((item) => {
-					return <CartItem key={`cart-${item.id}`} item={item} />;
+					return (
+						<CartItem
+							key={`cart-${item.id}`}
+							item={item}
+							incrementQuantity={props.incrementQuantity}
+							getCartItem={props.getCartItem}
+						/>
+					);
 				})}
 			</div>
 		</div>
