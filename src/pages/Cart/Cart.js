@@ -14,6 +14,7 @@ const Cart = (props) => {
 							key={`cart-${item.id}`}
 							item={item}
 							incrementQuantity={props.incrementQuantity}
+							decrementQuantity={props.decrementQuantity}
 							getCartItem={props.getCartItem}
 						/>
 					);
