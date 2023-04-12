@@ -63,27 +63,29 @@ const App = () => {
 		<BrowserRouter>
 			<div className="App">
 				<Navbar cartAmount={cartAmount} />
-				<Routes>
-					<Route path="/homepage" exact element={<Homepage />} />
-					<Route
-						path="/shop"
-						exact
-						element={<Shop addToCart={addToCart} cart={cart} />}
-					/>
-					<Route
-						path="/cart"
-						exact
-						element={
-							<Cart
-								cart={cart}
-								incrementQuantity={incrementQuantity}
-								decrementQuantity={decrementQuantity}
-								getCartItem={getCartItem}
-								clearCart={clearCart}
-							/>
-						}
-					/>
-				</Routes>
+				<main>
+					<Routes>
+						<Route path="/homepage" exact element={<Homepage />} />
+						<Route
+							path="/shop"
+							exact
+							element={<Shop addToCart={addToCart} cart={cart} />}
+						/>
+						<Route
+							path="/cart"
+							exact
+							element={
+								<Cart
+									cart={cart}
+									incrementQuantity={incrementQuantity}
+									decrementQuantity={decrementQuantity}
+									getCartItem={getCartItem}
+									clearCart={clearCart}
+								/>
+							}
+						/>
+					</Routes>
+				</main>
 			</div>
 		</BrowserRouter>
 	);

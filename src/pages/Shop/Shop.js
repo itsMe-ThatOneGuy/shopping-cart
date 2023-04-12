@@ -1,6 +1,7 @@
 import React from "react";
 import ShopItem from "../../components/ShopItem/ShopItem";
 import { useState, useEffect } from "react";
+import "./Shop.css";
 
 const Shop = (props) => {
 	const [items, setItems] = useState([]);
@@ -25,7 +26,7 @@ const Shop = (props) => {
 				<h1>Shop</h1>
 			</div>
 			<button onClick={test}>Test</button>
-			<div>
+			<div className="shop-container">
 				{items.map((item) => {
 					return (
 						<ShopItem
