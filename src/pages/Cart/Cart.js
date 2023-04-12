@@ -2,6 +2,10 @@ import React from "react";
 import CartItem from "../../components/CartItem/CartItem";
 
 const Cart = (props) => {
+	const cost = props.cart.reduce((total, item) => {
+		return total + item.price * item.quantity;
+	}, 0);
+
 	return (
 		<div>
 			<div>
@@ -19,6 +23,10 @@ const Cart = (props) => {
 						/>
 					);
 				})}
+			</div>
+			<div>
+				<h3>${cost.toFixed(2)}</h3>
+				<button>Checkout</button>
 			</div>
 		</div>
 	);
