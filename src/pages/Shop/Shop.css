@@ -1,7 +1,6 @@
 .shop-container {
 	gap: 4rem;
 	margin-top: 4rem;
-	animation: 2s ease 0s 1 normal none running fadeIn;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 }
