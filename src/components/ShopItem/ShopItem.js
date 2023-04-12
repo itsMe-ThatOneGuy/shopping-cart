@@ -19,14 +19,12 @@ const ShopItem = (props) => {
 				<p>${props.item.price}</p>
 			</div>
 			<div className="shop-item-controls">
-				<button>-</button>
 				<button
 					onClick={() => {
 						props.addToCart(item);
 					}}>
 					Add to cart
 				</button>
-				<button>+</button>
 			</div>
 		</div>
 	);
