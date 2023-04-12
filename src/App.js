@@ -22,6 +22,10 @@ const App = () => {
 		setCart(newCart);
 	};
 
+	const clearCart = () => {
+		setCart([]);
+	};
+
 	const updateCartAmount = () => {
 		const cartQuantity = cart.reduce(
 			(total, item) => total + item.quantity,
@@ -75,6 +79,7 @@ const App = () => {
 								incrementQuantity={incrementQuantity}
 								decrementQuantity={decrementQuantity}
 								getCartItem={getCartItem}
+								clearCart={clearCart}
 							/>
 						}
 					/>

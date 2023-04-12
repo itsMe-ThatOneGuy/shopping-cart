@@ -26,7 +26,7 @@ const Cart = (props) => {
 			</div>
 			<div>
 				<h3>${cost.toFixed(2)}</h3>
-				<button>Checkout</button>
+				<button onClick={() => props.clearCart()}>Checkout</button>
 			</div>
 		</div>
 	);
