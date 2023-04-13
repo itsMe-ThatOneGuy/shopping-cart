@@ -2,9 +2,11 @@ import React from "react";
 import CartItem from "../../components/CartItem/CartItem";
 
 const Cart = (props) => {
-	const cost = props.cart.reduce((total, item) => {
-		return total + item.price * item.quantity;
-	}, 0);
+	const cost = props.cart
+		.reduce((total, item) => {
+			return total + item.price * item.quantity;
+		}, 0)
+		.toFixed(2);
 
 	return (
 		<div>
@@ -25,7 +27,7 @@ const Cart = (props) => {
 				})}
 			</div>
 			<div>
-				<h3>${cost.toFixed(2)}</h3>
+				<h3>${cost}</h3>
 				<button onClick={() => props.clearCart()}>Checkout</button>
 			</div>
 		</div>
