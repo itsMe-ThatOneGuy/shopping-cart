@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { HashRouter, BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Shop from "./pages/Shop/Shop";
 import Homepage from "./pages/Homepage/Homepage";
