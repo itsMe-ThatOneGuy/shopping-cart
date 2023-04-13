@@ -11,7 +11,12 @@ const App = () => {
 	const [cartAmount, setCartAmount] = useState();
 
 	const addToCart = (item) => {
-		setCart([...cart, item]);
+		const index = getCartItem(item.id);
+		if (index === -1) {
+			setCart([...cart, item]);
+		} else {
+			incrementQuantity(index);
+		}
 	};
 
 	useEffect(() => {
