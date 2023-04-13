@@ -1,6 +1,8 @@
 import React from "react";
 
 const CartItem = (props) => {
+	const buttonText = props.item.quantity === 1 ? "Remove From Cart" : "-";
+
 	return (
 		<div data-cart-id={props.item.id}>
 			<img src={props.item.image} alt={props.item.title} />
@@ -11,7 +13,7 @@ const CartItem = (props) => {
 					const itemId = e.currentTarget.parentNode.dataset.cartId;
 					props.decrementQuantity(props.getCartItem(itemId));
 				}}>
-				-
+				{buttonText}
 			</button>
 			<p>{props.item.quantity}</p>
 			<button
