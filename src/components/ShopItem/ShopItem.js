@@ -6,18 +6,18 @@ const ShopItem = (props) => {
 		id: props.item.id,
 		image: props.item.image,
 		title: props.item.title,
-		price: props.item.price,
+		price: props.item.price.toFixed(2),
 		quantity: 1,
 	};
 
 	return (
-		<div className="shop-item" data-shopitem-id={props.item.id}>
+		<div className="shop-item" data-shopitem-id={item.id}>
 			<div className="shop-item-img">
-				<img src={props.item.image} alt={props.item.title} />
+				<img src={item.image} alt={item.title} />
 			</div>
 			<div className="shop-item-details">
-				<h3>{props.item.title}</h3>
-				<p>${props.item.price}</p>
+				<h6>{item.title}</h6>
+				<p>${item.price}</p>
 				<button
 					onClick={() => {
 						props.addToCart(item);
