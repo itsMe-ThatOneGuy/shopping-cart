@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Shop from "./pages/Shop/Shop";
 import Homepage from "./pages/Homepage/Homepage";
@@ -65,7 +65,7 @@ const App = () => {
 	};
 
 	return (
-		<BrowserRouter>
+		<HashRouter>
 			<div className="App">
 				<Navbar cartAmount={cartAmount} />
 				<main>
@@ -92,7 +92,7 @@ const App = () => {
 					</Routes>
 				</main>
 			</div>
-		</BrowserRouter>
+		</HashRouter>
 	);
 };
 export default App;
