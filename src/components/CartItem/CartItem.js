@@ -6,7 +6,7 @@ const CartItem = (props) => {
 
 	const handleOnChange = (e) => {
 		props.cartInputQuantity(
-			e.target.value,
+			parseInt(e.target.value),
 			props.getCartItem(e.currentTarget.parentNode.dataset.cartId)
 		);
 	};
