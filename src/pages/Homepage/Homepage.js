@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 const Homepage = () => {
 	return (
 		<div className="homepage">
-			<button>Start Consuming!</button>
+			<Link to={"/shop"}>
+				<button>Start Consuming!</button>
+			</Link>
 		</div>
 	);
 };
