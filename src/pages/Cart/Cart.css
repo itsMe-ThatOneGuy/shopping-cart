@@ -1,0 +1,11 @@
+.cart-container {
+	margin: 4rem 10rem 4rem 10rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.cart-list {
+	display: flex;
+	flex-direction: column;
+}
