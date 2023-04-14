@@ -54,14 +54,14 @@ const App = () => {
 		const currentCart = [...cart];
 		const thisItem = currentCart[item];
 		if (thisItem.quantity !== 0) {
-			thisItem.quantity -= 1;
+			thisItem.quantity--;
 		}
 		validateCart(currentCart);
 	};
 
 	const incrementQuantity = (item) => {
 		const currentCart = [...cart];
-		currentCart[item].quantity += 1;
+		currentCart[item].quantity++;
 		validateCart(currentCart);
 	};
 
