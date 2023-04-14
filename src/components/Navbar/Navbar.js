@@ -21,9 +21,6 @@ const Navbar = (props) => {
 						Cart <span> ({props.cartAmount})</span>
 					</li>
 				</Link>
-				<button onClick={() => console.log(props.cartAmount)}>
-					test
-				</button>
 			</ul>
 		</nav>
 	);
