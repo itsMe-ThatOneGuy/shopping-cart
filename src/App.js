@@ -44,6 +44,12 @@ const App = () => {
 		return index;
 	};
 
+	const cartInputQuantity = (value, item) => {
+		const currentCart = [...cart];
+		currentCart[item].quantity = value;
+		validateCart(currentCart);
+	};
+
 	const decrementQuantity = (item) => {
 		const currentCart = [...cart];
 		const thisItem = currentCart[item];
@@ -68,7 +74,6 @@ const App = () => {
 		<HashRouter>
 			<div className="App">
 				<Navbar cartAmount={cartAmount} />
-
 				<Routes>
 					<Route path="/homepage" exact element={<Homepage />} />
 					<Route
@@ -86,6 +91,7 @@ const App = () => {
 								decrementQuantity={decrementQuantity}
 								getCartItem={getCartItem}
 								clearCart={clearCart}
+								cartInputQuantity={cartInputQuantity}
 							/>
 						}
 					/>
