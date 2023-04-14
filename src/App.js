@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Shop from "./pages/Shop/Shop";
 import Homepage from "./pages/Homepage/Homepage";
@@ -75,6 +75,7 @@ const App = () => {
 			<div className="App">
 				<Navbar cartAmount={cartAmount} />
 				<Routes>
+					<Route path="/" element={<Navigate to="/homepage" />} />
 					<Route path="/homepage" exact element={<Homepage />} />
 					<Route
 						path="/shop"
