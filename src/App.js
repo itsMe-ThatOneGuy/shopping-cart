@@ -68,29 +68,28 @@ const App = () => {
 		<HashRouter>
 			<div className="App">
 				<Navbar cartAmount={cartAmount} />
-				<main>
-					<Routes>
-						<Route path="/homepage" exact element={<Homepage />} />
-						<Route
-							path="/shop"
-							exact
-							element={<Shop addToCart={addToCart} cart={cart} />}
-						/>
-						<Route
-							path="/cart"
-							exact
-							element={
-								<Cart
-									cart={cart}
-									incrementQuantity={incrementQuantity}
-									decrementQuantity={decrementQuantity}
-									getCartItem={getCartItem}
-									clearCart={clearCart}
-								/>
-							}
-						/>
-					</Routes>
-				</main>
+
+				<Routes>
+					<Route path="/homepage" exact element={<Homepage />} />
+					<Route
+						path="/shop"
+						exact
+						element={<Shop addToCart={addToCart} cart={cart} />}
+					/>
+					<Route
+						path="/cart"
+						exact
+						element={
+							<Cart
+								cart={cart}
+								incrementQuantity={incrementQuantity}
+								decrementQuantity={decrementQuantity}
+								getCartItem={getCartItem}
+								clearCart={clearCart}
+							/>
+						}
+					/>
+				</Routes>
 			</div>
 		</HashRouter>
 	);
