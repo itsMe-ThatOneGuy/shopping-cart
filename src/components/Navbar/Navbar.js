@@ -18,7 +18,7 @@ const Navbar = (props) => {
 				</Link>
 				<Link style={navStyle} to={"/cart"}>
 					<li>
-						Cart <span>{props.cartAmount}</span>
+						Cart <span> ({props.cartAmount})</span>
 					</li>
 				</Link>
 				<button onClick={() => console.log(props.cartAmount)}>
